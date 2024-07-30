@@ -328,3 +328,119 @@
     transform: translate(-50%, -50%);
     opacity: 1;
   }
+
+.product-title { margin-bottom: 15px; }
+
+.product-card:is(:hover, :focus) .product-title { color: var(--red-crayola); }
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.product-author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-img {
+  background: var(--black);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.author-username,
+.product-price .label {
+  color: inherit;
+  font-size: var(--fs-8);
+}
+
+.author-username:is(:hover, :focus) { color: var(--golden-puppy); }
+
+.product-price data {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-8);
+}
+
+.tag {
+  background: var(--golden-puppy);
+  color: var(--black);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.about { padding: 60px 0; }
+
+.about-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin: 0 10px;
+}
+
+.about-item {
+  background: var(--eerie-black-2);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.about-card {
+  position: relative;
+  padding: 30px 10px 20px;
+  border: 1px solid var(--onyx-1);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.about-card::before,
+.about-card::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: var(--sonic-silver);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.about-card::before {
+  width: 3px;
+  height: 100px;
+}
+
+.about-card::after {
+  width: 100px;
+  height: 3px;
+}
+
+.about-item:hover .about-card::before,
+.about-item:hover .about-card::after { background: var(--golden-puppy); }
+
+.about-card .card-number {
+  position: absolute;
+  background: var(--eerie-black-1);
+  color: var(--onyx-2);
+  top: -15px;
+  left: -15px;
+  padding: 5px 15px;
+  font-size: 24px;
+  font-weight: var(--fw-700);
+  border-top-left-radius: 18px;
+  border: 14px solid var(--eerie-black-2);
+}
